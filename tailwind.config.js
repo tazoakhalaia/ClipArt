@@ -9,11 +9,16 @@ module.exports = {
       height:{
         'height': '760px',
         'heightinfo': '519px',
-        'imgsize': '356px'
+        'imgsize': '356px',
+        'mdslideheight': '560px'
+      },
+      width: {
+        'mdslidewidth': '928px'
       },
       screens: {
         'xl': {'max': '1240px', 'min': '1024px'},
-        'md': {'max': '1024px'}
+        'md': {'max': '1024px', 'min': '360px'},
+        'sm': {'max': '360px'}
       }
     },
   },
