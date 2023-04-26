@@ -10,7 +10,8 @@ module.exports = {
         'height': '760px',
         'heightinfo': '519px',
         'imgsize': '356px',
-        'mdslideheight': '560px'
+        'mdslideheight': '560px',
+        'smslideheight': '280px'
       },
       width: {
         'mdslidewidth': '928px'
