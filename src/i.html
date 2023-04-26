@@ -1,0 +1,340 @@
+<!-- <!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="index.js" defer></script>
+  <link href="/dist/output.css" rel="stylesheet">
+  <title>Clip Art</title>
+  <style>
+    .relative:hover .absolute {
+      display: block;
+    }
+    .swiper {
+      width: 80%;
+      height: 760px;
+      margin-top: 20px;
+    }
+
+    .swiper-slide {
+      font-size: 18px;
+    }
+
+    #arrow {
+      width: 30px;
+      height: 30px;
+      margin-top: -14px;
+    }
+
+    .btn{
+        position: absolute;
+        bottom: 80px;
+        z-index: 10;
+        background-color: rgb(237, 234, 234);
+        border-radius: 5px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        left: 100px;
+    }
+
+    .drop {
+      display: none;
+      flex-direction: column;
+    }
+
+    .search{
+      display: none;
+    }
+
+    @media only screen and (max-width: 360px) {
+      .swiper{
+        width: 100%;
+      }
+
+      .btn{
+        display: none;
+      }
+
+      #arrow{
+        background-color: rgb(179, 175, 175);
+        border-radius: 5px;
+      }
+    }
+
+    @media only screen and (min-width: 361px) and (max-width: 1024px) {
+      .swiper{
+        width: 928px;
+      }
+    } 
+  </style>
+</head>
+<body> -->
+  <!--header-->
+  <!-- <div class=" w-full h-20 md:relative">
+    <div class="w-4/5 m-auto h-full flex justify-between items-center">
+      <div class="w-36 flex justify-between md:hidden">
+        <div class="bg-gray-100 w-10 h-10 rounded-sm flex justify-center items-center">
+          <img src="../img/icons/icon.png" >
+        </div>
+        <div class="bg-gray-100 w-10 h-10 rounded-sm flex justify-center items-center">
+          <img src="../img/icons/tw.png" >
+        </div>
+        <div class="bg-gray-100 w-10 h-10 rounded-sm flex justify-center items-center">
+          <img src="../img/icons/inst.png" >
+        </div>
+      </div>
+      <div class="w-1/3 flex justify-center">
+        <img src="../img/logo.png">
+      </div>
+      <div class="hidden sm:flex items-center w-28  absolute left-36">
+        <input class="search w-1/2 h-10 bg-gray-200" type="text" placeholder="ძიება...">
+        <div class="bg-gray-100 flex absolute right-0 items-center p-3 rounded-sm">
+        <img class="w-6 h-6 searchimg" src="../img/icons/Search.png">
+        </div>
+      </div>
+      <div class="w-80 bg-gray-200 rounded-md h-12 flex items-center sm:hidden">
+        <input class="w-full relative h-full bg-gray-200 rounded-md pl-5" type="text" placeholder="ძიება...">
+        <div class="bg-gray-100 w-10 h-10 flex justify-center mr-4 rounded-sm items-center sm:hidden">
+          <img src="../img/icons/Search.png">
+        </div>
+      </div>
+      <div class="hidden absolute top-4 right-12 dropdown md:block" id="dropdown">
+        <img src="../img/icons/dropdown.png" alt="">
+        <div class="drop">
+          <ul class="absolute z-20 mt-4 bg-gray-300 rounded-md">
+          <li class="mt-4 bor">პოლიტიკა</li>
+          <li class="mt-4">Covide-19</li>
+          <li class="mt-4">სამართალი</li>
+          <li class="mt-4">ბიზნესი & ეკონომიკა</li>
+          <li class="mt-4">კრიმინალი</li>
+          <li class="mt-4">შემთხვევა</li>
+          <li class="mt-4">მსოფლიო</li>
+          <li class="mt-4">სპორტი</li>
+          <li class="mt-4">რელიგია</li>
+          <li class="mt-4">ხელოვნება</li>
+          <li class="mt-4">სპორტი</li>
+          <li class="mt-4">რელიგია</li>
+          <li class="mt-4">ხელოვნება</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end header-->
+
+  <!-- menu -->
+  <div class="bg-gray-300 mt-8 h-12 md:hidden ">
+    <div class="w-4/5 h-full m-auto flex justify-between items-center">
+      <a href="#">პოლიტიკა</a>
+      <a href="#">საზოგადოება</a>
+      <a href="#">Covide-19</a>
+      <a href="#">სამართალი</a>
+      <a href="#">ბიზნესი & ეკონომიკა</a>
+      <a href="#">კრიმინალი</a>
+      <a href="#">შემთხვევა</a>
+      <a href="#">მსოფლიო</a>
+      <a class="xl:hidden" href="#">სპორტი</a>
+      <a class="xl:hidden" href="#">რელიგია</a>
+      <a class="xl:hidden" href="#">ხელოვნება</a>
+      <div class="relative">
+        <a class="hidden px-4 py-2 text-customOrange xl:flex ">მეტი</a>
+        <div class="absolute z-10 hidden bg-gray-100 py-2">
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">სპორტი</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">რელიგია</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">ხელოვნება</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- end menu -->
+
+  <!-- slider -->
+    <!-- <div class="swiper mySwiper md:h-[519px] md:w-11/12">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide relative">
+          <img class="w-full h-full sm:w-full sm:h-full absolute z-0" src="../img/slide/slider.png">
+          <div class="absolute z-10 bg-white w-1/3 h-64 
+          rounded-md bottom-10 left-20 pl-10 pt-10 xl:w-4/5 sm:left-0 sm:bottom-0 sm:w-full">
+            <div class="flex">
+              <h1 class="text-customOrange">პოლიტიკა </h1>
+              <p class="ml-2">• 18.04.2022</p>
+            </div>
+            <h1 class="font-bold mt-4">„ნორვეგიას ჰოლანდი ჰყავს, ჩვენ კი გურამ 
+              კაშია“ - ვილი სანიოლის პრესკონფერენცია
+              </h1>
+          </div>
+          <div class="btn md:absolute md:top-10">
+          <img class="swiper-button-next" id="arrow" src="../img/arrow/arrow_right.png">
+          <h1>1/4</h1>
+          <img class="swiper-button-prev" id="arrow" src="../img/arrow/arrow_left.png">
+          </div>
+          <div class="hidden sm:flex">
+          <img class="swiper-button-next" id="arrow" src="../img/arrow/arrow_right.png">
+          <img class="swiper-button-prev" id="arrow" src="../img/arrow/arrow_left.png">
+          </div>
+        </div>
+        <div class="swiper-slide relative">
+          <img class="w-full h-full absolute z-0" src="../img/slide/slider (4).png">
+          <div class="absolute z-10 bg-white w-1/3 h-64 rounded-md bottom-10 left-20 pl-10 
+          pt-10 xl:w-4/5 sm:left-0 sm:bottom-0 sm:w-full">
+            <div class="flex">
+              <h1 class="text-customOrange">პოლიტიკა </h1>
+              <p class="ml-2">• 18.04.2022</p>
+            </div>
+            <h1 class="font-bold mt-4">„ნორვეგიას ჰოლანდი ჰყავს, ჩვენ კი გურამ 
+              კაშია“ - ვილი სანიოლის პრესკონფერენცია
+              </h1>
+          </div>
+          <div class="btn md:absolute md:top-10">
+            <img class="swiper-button-next" id="arrow" src="../img/arrow/arrow_right.png">
+            <h1>2/4</h1>
+            <img class="swiper-button-prev" id="arrow" src="../img/arrow/arrow_left.png">
+            </div>
+            <div class="hidden sm:flex">
+              <img class="swiper-button-next" id="arrow" src="../img/arrow/arrow_right.png">
+              <img class="swiper-button-prev" id="arrow" src="../img/arrow/arrow_left.png">
+              </div>
+        </div>
+        <div class="swiper-slide relative">
+          <img class="w-full h-full absolute z-0" src="../img/slide/slider (8).png">
+          <div class="absolute z-10 bg-white w-1/3 h-64 rounded-md 
+          bottom-10 left-20 pl-10 pt-10 xl:w-4/5 sm:left-0 sm:bottom-0 sm:w-full">
+            <div class="flex">
+              <h1 class="text-customOrange">პოლიტიკა </h1>
+              <p class="ml-2">• 18.04.2022</p>
+            </div>
+            <h1 class="font-bold mt-4">„ნორვეგიას ჰოლანდი ჰყავს, ჩვენ კი გურამ 
+              კაშია“ - ვილი სანიოლის პრესკონფერენცია
+              </h1>
+          </div>
+          <div class="btn md:absolute md:top-10">
+            <img class="swiper-button-next" id="arrow" src="../img/arrow/arrow_right.png">
+            <h1>3/4</h1>
+            <img class="swiper-button-prev" id="arrow" src="../img/arrow/arrow_left.png">
+            </div>
+            <div class="hidden sm:flex">
+              <img class="swiper-button-next" id="arrow" src="../img/arrow/arrow_right.png">
+              <img class="swiper-button-prev" id="arrow" src="../img/arrow/arrow_left.png">
+              </div>
+        </div>
+        <div class="swiper-slide relative">
+          <img class="w-full h-full absolute z-0" src="../img/slide/slider (9).png">
+          <div class="absolute z-10 bg-white w-1/3 h-64 rounded-md bottom-10 left-20 pl-10 pt-10 xl:w-4/5 sm:left-0 sm:bottom-0 sm:w-full">
+            <div class="flex"> 
+              <h1 class="text-customOrange">პოლიტიკა </h1>
+              <p class="ml-2">• 18.04.2022</p>
+            </div>
+            <h1 class="font-bold mt-4">„ნორვეგიას ჰოლანდი ჰყავს, ჩვენ კი გურამ 
+              კაშია“ - ვილი სანიოლის პრესკონფერენცია
+              </h1>
+          </div>
+          <div class="btn md:absolute md:top-10">
+            <img class="swiper-button-next" id="arrow" src="../img/arrow/arrow_right.png">
+            <h1>4/4</h1>
+            <img class="swiper-button-prev" id="arrow" src="../img/arrow/arrow_left.png">
+            </div>
+            <div class="hidden sm:flex">
+              <img class="swiper-button-next" id="arrow" src="../img/arrow/arrow_right.png">
+              <img class="swiper-button-prev" id="arrow" src="../img/arrow/arrow_left.png">
+              </div>
+        </div>
+      </div>
+    </div> -->
+  <!-- end slider -->
+
+  <!-- information -->
+  <!--size: 1024px -->
+  <!-- <div class="hidden w-[928px] h-[519px] mt-8 m-auto md:flex sm:w-full sm:h-44">
+  <div class="w-full shadow-indigo-500/40">
+    <div class="w-full">
+      <img class="w-full h-[356px]" src="../img/news/pic (2).png">
+      <h1 class="mt-4 font-bold text-sm ml-2">ჩრდილოეთ კორეამ აშშ-სა და სამხრეთ კორეის წინააღმდეგ იმიტირებული ბირთვული კონტრშეტევა დაიწყო</h1>
+      <hr class="mt-4">
+      <div class="flex justify-between mt-4">
+        <h1 class="text-customOrange font-bold ml-2">ახალი ამბები</h1>
+        <p class="ml-2">18.04.2023 </p>
+      </div>
+    </div>
+  </div>
+  </div> -->
+  <!--1024px-->
+  <!-- <div class="w-4/5 h-[519px] m-auto mt-8 flex justify-between mb-20 sm:hidden">
+    <div class="w-80">
+      <div class="h-60 bg-white drop-shadow-lg">
+        <img class="w-full h-3/5" src="../img/news/pic.png">
+        <p class="text-sm mt-4 ml-2">პოლიტიკა • 18.04.2023</p>
+        <h1 class="font-bold text-sm mt-2 ml-2">კიმ ჩენ ინი აშშ-სა და სამხრეთ კორეას ბირთვული იარაღით ემუქრება</h1>
+      </div>
+      <div class="h-60 bg-white drop-shadow-lg mt-8">
+        <img class="w-full h-3/5" src="../img/news/pic (1).png">
+        <p class="text-sm mt-4 ml-2">პოლიტიკა • 18.04.2023</p>
+        <h1 class="font-bold text-sm mt-2 ml-2">საქართველოს მორაგბეთა ნაკრები „რაგბი ევროპის“ გამარჯვებულია</h1>
+      </div>
+    </div>
+    <div class="w-2/4 ml-6 mr-6 shadow-indigo-500/40 md:hidden">
+      <div class="w-full">
+        <img class="w-full h-[356px]" src="../img/news/pic (2).png">
+        <h1 class="mt-4 font-bold text-sm ml-2">ჩრდილოეთ კორეამ აშშ-სა და სამხრეთ კორეის წინააღმდეგ იმიტირებული ბირთვული კონტრშეტევა დაიწყო</h1>
+        <hr class="mt-4">
+        <div class="flex justify-between mt-4">
+          <h1 class="text-customOrange font-bold ml-2">ახალი ამბები</h1>
+          <p class="ml-2">18.04.2023 </p>
+        </div>
+      </div>
+    </div>
+    <div class="w-1/4 md:w-80">
+      <div class="h-60 bg-white drop-shadow-lg">
+        <img class="w-full h-3/5" src="../img/news/pic (3).png">
+        <p class="text-sm mt-4 ml-2">პოლიტიკა • 18.04.2023</p>
+        <h1 class="font-bold text-sm mt-2 ml-2">დღეს კიბოს სკრინინგის მხარდასაჭერი კონცერტი გაიმართება</h1>
+      </div>
+      <div class="h-60 bg-white drop-shadow-lg mt-8">
+        <img class="w-full h-3/5" src="../img/news/pic (4).png">
+        <p class="text-sm mt-4 ml-2">პოლიტიკა • 18.04.2023</p>
+        <h1 class="font-bold text-sm mt-2 ml-2">უკრაინას დიდი კონტრშეტევისთვის მხოლოდ ერთი მცდელობა ექნება</h1>
+      </div>
+    </div>
+  </div> -->
+  <!-- end infromation -->
+
+  <!-- for 360px-->
+        <!-- <div class="hidden h-60 mt-96 w-full m-auto sm:block bg-white drop-shadow-lg">
+          <img class="w-full h-3/5" src="../img/news/pic.png">
+          <p class="text-sm mt-4 ml-2">პოლიტიკა • 18.04.2023</p>
+          <h1 class="font-bold text-sm mt-2 ml-2">კიმ ჩენ ინი აშშ-სა და სამხრეთ კორეას ბირთვული იარაღით ემუქრება</h1>
+        </div>
+        <div class="hidden h-60 sm:block bg-white drop-shadow-lg mt-8">
+          <img class="w-full h-3/5" src="../img/news/pic (1).png">
+          <p class="text-sm mt-4 ml-2">პოლიტიკა • 18.04.2023</p>
+          <h1 class="font-bold text-sm mt-2 ml-2">საქართველოს მორაგბეთა ნაკრები „რაგბი ევროპის“ გამარჯვებულია</h1>
+        </div>
+        <div class="hidden h-60  sm:block bg-white drop-shadow-lg">
+          <img class="w-full h-3/5" src="../img/news/pic (3).png">
+          <p class="text-sm mt-4 ml-2">პოლიტიკა • 18.04.2023</p>
+          <h1 class="font-bold text-sm mt-2 ml-2">დღეს კიბოს სკრინინგის მხარდასაჭერი კონცერტი გაიმართება</h1>
+        </div>
+        <div class="hidden sm:block h-60 w-full bg-white drop-shadow-lg mt-8">
+          <img class="w-full h-3/5" src="../img/news/pic (4).png">
+          <p class="text-sm mt-4 ml-2">პოლიტიკა • 18.04.2023</p>
+          <h1 class="font-bold text-sm mt-2 ml-2">უკრაინას დიდი კონტრშეტევისთვის მხოლოდ ერთი მცდელობა ექნება</h1>
+      </div> -->
+  <!-- end 360px-->
+
+  <!--swiper arrow logic-->
+  <!-- <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script> -->
+  <!-- end arrow logic-->
+<!-- </body>
+</html> -->
